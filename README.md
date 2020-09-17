@@ -1,0 +1,1 @@
+JSON-RPC Auth in Django

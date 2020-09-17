@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -119,22 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CERT = '6316dc322e44e871713ce38804a07789ae20f0c9'
-KEY = 'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC76eyroh2mFLQOTVxjD/ZKnWB7QexLgcjEyTfKfN2CDBSGtFgxPIsP' \
-      '/uzo2VDFc4WIitPqREzVFHr5zSCroH7rHS6IrYmMH3lOTDwquMt57Y' \
-      '+D85szjLwgRfgT4ObpXY1DtkgbJUfeQIK40GRPXulGyH1sm0rW5bEWIeFAKBtmgFMbvygqRCp8WVajSTBTVMY4cUtKu5ihtCiqmquHNf' \
-      '+nT2FKy+7MSgYOIOed1opBEhYX/8yFUpRlrRegI/5ibsy7S7gO5JznCGrARjTuxSdYEp6CrLUs7GZ8mqYWFCb' \
-      '+SICdhoJhIPUWANXCowNe2zpG3hSts+sYgwEz1LhHczFFAgMBAAECggEAZcwosSYGp8UJccII7YVlKDCvZrZkutbZG3niJmiUWvIOYJbsO' \
-      '+gPcZ/pWY74ia62RSzn9j3/3WLV5+Nu8mrktpu9bL+OBwG55me4JHCtkiTWnWXnyvpPo7Aj3yj0DrHmaCskTshYcZdC+bmyzaid' \
-      '+QF9qMtLtLUDxPifnPDdPx4QJ7O9S3AwUdYGfGzt6SWVaso+U18' \
-      '+ymdOUS2B4Y54DekmUYAHFgZ47pVi8cjcPWtCoBnWXmzEncdpjDgIlRFVeU8w3nmZTkUxiuUtV87iXvekHI1azMDxZu3xUWZdWZn+UL7RlA' \
-      '+RGumkrAFYQrVp4CoVyg3GajlZU4zutd3VlQKBgQD2aoXflAMWD9WFt32aE6ED9LlU7ZGzHNhw/EhzNh' \
-      '+DisY4qiAERlXgZz9bJ3Rb7ljGp3WFo79uvDH7H5lIDKBjHMgp39JouqFjnWKZzH' \
-      '+vz5XhvKuwCnx3jLoYsK8rLIu5sZvhkTyHMz1yCszKJsO1nR1DZsWzyG7KghK4LCNRYwKBgQDDOOopOCMg4jvO4mlEZJTFRMfwult3' \
-      '+ikas5CIuOs1kR3BGXn2sciEBHG6rJ+dlrsvTJHuY9shfYZHPgp8jjG6cFbZGQoHS5W/QKn2V3LFK9+b' \
-      '/+b3JSLJD3M8qb8gO70jXwxSPQginhOJ+vt6pBpIa8ysEa7WlPMc3dPWc8EHNwKBgAismUfUiwNEzWxmmCpLVJiyDbAaqM1YT5oyl05O8m8L' \
-      '/IxUGMptu2op2EYaLnNqAYAEtxNcP0njoBLJ+vhZUXALvFQVB/Ad2b6K9MSbOUd0FD' \
-      '+dB6IrzFPdBVQHLDNl3wlLYkRfe3T67cfM74aSNMN442XTAVSh0pyYVZZcH2YnAoGAUVw58r3LnhvLEzi26GMGwYQd08zG7CSc1tz5IpH2r' \
-      'Ndy0BQ/CTokuChmAYeJ6hJ0pozB0Nla7QU0XiKUGj7kqK/C8i2GSW4N1awsaVcepN/ZDFnFN0EJ00OWIjUYS2W6OLCXIPsAlfTNbdbk0cLsl' \
-      'TwgC6I+/H0NKP2mGJ0bWFcCgYEArpuAo9RSX9vkbdYkOi63zcdIXjwxJw2ddKzp1EMRuEMU6oIFaXoz1MRVsys2JB/K1WGQO9afjIvgpoI' \
-      'TPEe41SVdHIHamTjjcEJXlZ6rn1oiMkqchRNLyEiW5C1+c20uvV1NwoR9Tlr+ryGJ7UXWQeZTD6mCdLOxGaN/FMvOUdQ= '
+########################################
+
+cert = 'client03test.crt'
+key = 'client03test.key'

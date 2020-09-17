@@ -5,24 +5,42 @@ from django.http import HttpResponse, HttpRequest, JsonResponse
 import json
 from django.http import request
 from django.views.decorators.csrf import csrf_protect
-
+import urllib
 from main.settings import cert, key
 
-# @csrf_protect
-def auth(request):
 
+# def auth(request):
+#     url = "https://slb.medv.ru/api/v2/"
+#     headers = {
+#         'content-type': 'application/json',
+#     }
+#     payload = {
+#         "method": "auth.check",
+#         "params": [],
+#         "jsonrpc": "2.0",
+#         "id": 1,
+#     }
+#     # HttpRequest.POST
+#     response = requests.post(url, cert=(cert, key), verify=False, headers=headers, data=json.dumps(payload))
+#     print(response.json())
+#     # return HttpResponse(f'<h3>{response.json()}</h3>')
+#     return JsonResponse(response.json())
+
+
+
+def auth(request):
     url = "https://slb.medv.ru/api/v2/"
     headers = {
         'content-type': 'application/json',
     }
     payload = {
-        "method": "test",
+        "method": "auth.check",
         "params": [],
         "jsonrpc": "2.0",
         "id": 1,
     }
-    HttpRequest.POST
-    response = requests.post(url, cert=(cert, key), verify=True, headers=headers, data=json.dumps(payload))
+    # HttpRequest.POST
+    response = requests.post(url, cert=(cert, key), verify=False, headers=headers, data=json.dumps(payload))
     print(response.json())
     # return HttpResponse(f'<h3>{response.json()}</h3>')
     return JsonResponse(response.json())

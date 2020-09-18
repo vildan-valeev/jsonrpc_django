@@ -29,7 +29,28 @@ def main2():
     response = opener.open(Request(url=url, data=data, headers=headers, )).read().decode()
     print(response)
 
+    # response = opener.open(Request(url=url, data=data, headers=headers, ))
+    # print(response.getcode())
+
+
+def auth(func):
+
+    def wrapper(*args, **kwargs):
+        # if response.getcode() == 200:
+        func()
+        # else:
+        #     return 'ошибка соединения'
+    return wrapper
+
+
+@auth
+def action():
+    print('ok')
+
+
+
 
 if __name__ == "__main__":
     # main()
     main2()
+    # action()

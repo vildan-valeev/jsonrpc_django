@@ -46,7 +46,31 @@ def auth(func):
         return 'ошибка соединения'
 
 
+class Service:
 
+    def __init__(self):
+        pass
+
+    def check(self):
+        pass
+        # data = json.dumps(values).encode('utf-8')
+        # context = ssl.create_default_context()
+        # context.load_cert_chain(certfile=cert, keyfile=key)
+        # opener = urllib.request.build_opener(urllib.request.HTTPSHandler(context=context))
+        # response = opener.open(Request(url=url, data=data, headers=headers, ))
+        # print(response.read().decode())
+        # if response.getcode() == 200:
+        #     return func
+        # else:
+        #     return 'ошибка соединения'
+
+
+
+    def login(self):
+        pass
+
+    def another(self):
+        pass
 
 
 

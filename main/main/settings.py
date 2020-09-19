@@ -120,7 +120,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-########################################
+###########API#####################
 
 cert = 'client03test.crt'
 key = 'client03test.key'
+url = "https://slb.medv.ru/api/v2/"
+headers = {'content-type': 'application/json'}

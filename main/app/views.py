@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest, JsonResponse
-from main.settings import cert, key,
+from main.settings import cert, key
 from .service import auth
 
 

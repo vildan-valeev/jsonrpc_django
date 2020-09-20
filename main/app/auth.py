@@ -20,3 +20,4 @@ def auth(func):
     else:
         return 'ошибка'
 
+

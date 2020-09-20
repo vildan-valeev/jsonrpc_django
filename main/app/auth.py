@@ -21,3 +21,28 @@ def auth(func):
         return 'ошибка'
 
 
+
+
+
+
+method_response = {'method': 'auth.check', 'code_response': 200}
+
+def decorator_function(method):
+    def actual_decorator(func):
+        def wrapper(*args, **kwargs):
+            print(*args, **kwargs)
+            print('Выполняем обёрнутую функцию...')
+            func(*args, **kwargs)
+            print('Выходим из обёртки')
+
+        return wrapper
+    if method == method_response['method']:
+        print(f'ок: this method  is {method}')
+        return actual_decorator
+    else:
+        print("Неправильный метод")
+
+@decorator_function(method='auth.chec')
+def main(request):
+    txt = "Отлично, доступ получен"
+    print(f'{txt}: {request}')

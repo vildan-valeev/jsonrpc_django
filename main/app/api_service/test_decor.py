@@ -1,31 +1,46 @@
-method_response = 'auth.check'
-code_response = 200
+method_response = {'method': 'auth.check', 'code_response': 200}
 
 
-class Service:
-    def __init__(self, request):
-        self.request = request
+def decorator_function(method):
+    def actual_decorator(func):
+        def wrapper(*args, **kwargs):
+            print(*args, **kwargs)
+            print('Выполняем обёрнутую функцию...')
+            func(*args, **kwargs)
+            print('Выходим из обёртки')
 
-    def check(self, request):
-        if request == '25658545':
-            return "Авторизцая разрешена"
+        return wrapper
+    if method == method_response['method']:
+        print(f'ок: this method  is {method}')
+        return actual_decorator
+    else:
+        print("Неправильный метод")
 
 
-s = Service
+class Decorator_class:
+    def __init__(self, func):
+        print(type(func))
+        self.func = func
+
+    def check(self, method, func):
+        print(f'ок: this method  is {method}')
+        if method == method_response['method']:
+            return func
+        else:
+            return 'Неправильный метод'
 
 
-@s.check
+s = Decorator_class
+
+# @s.check(method='auth.check')
+@decorator_function(method='auth.chec')
 def main(request):
-    txt = "Отлично, доступ получени"
-    res = request
-    print(f'{txt}: {res}')
+    txt = "Отлично, доступ получен"
+    print(f'{txt}: {request}')
 
 
 if __name__ == '__main__':
     main('25658545')
-
-
-
 
 ########################################
 
@@ -44,4 +59,3 @@ if __name__ == '__main__':
 # def hello_world():
 #     print('Hello world!')
 #
-
